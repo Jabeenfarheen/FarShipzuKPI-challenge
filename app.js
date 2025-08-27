@@ -1,6 +1,5 @@
-// Utility: get current IST datetime string
 function getCurrentISTDateTime() {
-  let istOffset = 5 * 60 + 30; // 5hr 30mins offset in minutes
+  let istOffset = 5 * 60 + 30;
   let now = new Date();
   let utc = now.getTime() + now.getTimezoneOffset() * 60000;
   let istTime = new Date(utc + istOffset * 60000);
@@ -175,16 +174,13 @@ function downloadSubmissionJSON(kpis, thresholds) {
   dlAnchorElem.remove();
 }
 
-// Usage: wire this after KPIs & thresholds are calculated and available in variables
 document
   .getElementById("downloadSubmissionBtn")
   .addEventListener("click", function () {
-    // Replace kpis and thresholds below with your actual current variables
     downloadSubmissionJSON(kpis, thresholds);
   });
 
 function loadDataset() {
-  // Replace with your data file URL or local path
   fetch("shipzu_sample_orders_IST.json")
     .then((res) => res.json())
     .then((data) => {
@@ -216,5 +212,4 @@ document.getElementById("thRisk").addEventListener("change", () => {
   updateUI();
 });
 
-// Load data initially
 loadDataset();

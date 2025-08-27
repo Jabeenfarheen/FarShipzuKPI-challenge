@@ -181,7 +181,6 @@ footer {
   user-select: none;
 }
 
-/* Responsive mobile adjustments */
 @media (max-width: 480px) {
   .thresholds {
     flex-direction: column;
