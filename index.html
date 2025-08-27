@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shipzu Ecommerce Style Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Shipzu Ecommerce Dashboard</h1>
+        <p>IST timezone | Configure thresholds and evaluate KPIs</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="thresholds">
+        <div class="threshold-input">
+          <label for="thDelivered">Delivered % Target</label>
+          <input
+            id="thDelivered"
+            type="number"
+            min="0"
+            max="100"
+            step="0.01"
+            value="85"
+          />
+        </div>
+        <div class="threshold-input">
+          <label for="thRto">RTO % Target</label>
+          <input
+            id="thRto"
+            type="number"
+            min="0"
+            max="100"
+            step="0.01"
+            value="8"
+          />
+        </div>
+        <div class="threshold-input">
+          <label for="thRisk">Orders at Risk Target</label>
+          <input id="thRisk" type="number" min="0" step="1" value="20" />
+        </div>
+        <button id="evaluateBtn">Evaluate</button>
+      </section>
+
+      <section class="kpi-grid">
+        <div class="kpi-card" id="cardDelivered">
+          <div class="kpi-title">Delivered %</div>
+          <div class="kpi-value" id="deliveredPercent">--</div>
+        </div>
+        <div class="kpi-card" id="cardRTO">
+          <div class="kpi-title">RTO %</div>
+          <div class="kpi-value" id="rtoPercent">--</div>
+        </div>
+        <div class="kpi-card" id="cardRisk">
+          <div class="kpi-title">Orders At Risk</div>
+          <div class="kpi-value" id="ordersAtRisk">--</div>
+        </div>
+        <div class="kpi-card" id="cardDRR">
+          <div class="kpi-title">Daily Run Rate (DRR)</div>
+          <div class="kpi-value" id="drr">--</div>
+        </div>
+      </section>
+
+      <section class="rules-section">
+        <h2>Rules Output</h2>
+        <div id="rulesOutput" class="rules-container"></div>
+      </section>
+
+      <footer>
+        <div id="istTimestamp"></div>
+      </footer>
+      <div class="button-container">
+        <button id="downloadSubmissionBtn">Download submission.json</button>
+      </div>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
