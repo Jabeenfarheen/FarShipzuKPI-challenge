@@ -218,3 +218,13 @@ footer {
 .button-container {
   text-align: center;
 }
+
+.button-container .open-link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.button-container .open-link:hover {
+  color: darkblue;
+}
