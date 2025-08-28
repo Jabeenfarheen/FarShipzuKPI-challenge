@@ -180,6 +180,17 @@ document
     downloadSubmissionJSON(kpis, thresholds);
   });
 
+function openJSON() {
+  fetch("submission.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const newWindow = window.open();
+      newWindow.document.write(
+        "<pre>" + JSON.stringify(data, null, 2) + "</pre>"
+      );
+    });
+}
+
 function loadDataset() {
   fetch("shipzu_sample_orders_IST.json")
     .then((res) => res.json())
