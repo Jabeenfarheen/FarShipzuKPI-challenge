@@ -17,7 +17,7 @@ This is my submission for the **Shipzu Full-Stack Intern Challenge**.
 
 ## 🔹 Deployment
 
-Live Demo: [https://farshipzukpi-challenge.vercel.app](https://farshipzukpi-challenge.vercel.app)
+Live URL: [https://far-shipzu-kpi-challenge.vercel.app/]
 
 ## 🔹 Tech Stack
 
